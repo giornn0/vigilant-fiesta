@@ -1,0 +1,55 @@
+Eventos en la interfaz de usuario
+Cuando hay necesidad de notificar sobre cambios en un objeto
+Comunicacionmes por Sockets
+Cuando encesitamos trabjar con flujos de informacion (streams)
+
+3 piezas fundamneentales Observables, Subscribes Operators
+Observables => pieza fundamental de las aplicaciones reactivas 
+son la fuente informacion, pueden emitir multiples valores o ninguno
+pueden emitir errores, ser infinitos o finitos(completarse)
+pueden ser sincronos o asincronos
+
+Subscribers=> se subscriben a un observable, es decir estan pendiente de lo que realizqa un observable
+consumen u observan la data del observable
+pueden recibir error y eventos del observable
+deconocen todo lo que se encuentra detras del observable
+
+Operators=>
+usados para transformar Observables(map, group, scan)
+usados para filtrar Observables(filter,distinct, skip, debounce)
+usados para combinar Observables y crear nuevos Observables
+
+Beneficios de la programacion reactiva=>
+evitar el callback hell
+Trabajar de formas simples tareas  asincronas o sincronas
+uso de operadores para reducir y simplicar el trabajo
+es facil transformar los flujos(streams) de informacion
+codigo mas limpio y facil de leert
+facil de implementar
+facil anexar procedimientos sin alterar el producto final
+
+Patron Observer=>
+patron de diseño de software que define una dependencia del tipo 1 a muchos
+entre objetos , de manera que cuando uno de los objetos
+cambia su estado, notifica este cambio a todos los dependientes
+Patron iterador=>
+en POO el patron iterador define una interfaz que declara los metodos necesarios
+para acceder secuencialmente a ungrupo de objetos de una coleccion
+Programacion funcional=>
+crear un conkinmto de funciones que tengan un objetivo especifico.
+Es decir si tengo una funcion que reciba 'A' y retorna 'A+1',
+siempre que yo llame a esa funcion retornara 'A+1'
+sin efectos secundarios, sin mutar la data
+
+observer notifica cuando suceden cambios
+itterator poder ejecutar operaciones secuenciales
+functional programation tenerfunciones con tareas especificas 
+que reciban argumentos y no muten la informacion
+
+observable $
+---> linea de tiempo
+cada canica => valores que el observable emita
+----|-> linea de cuando el observable es completado
+flechas verticales llevan a un operadores
+x cuando el observable emitio un error, y se termina
+
