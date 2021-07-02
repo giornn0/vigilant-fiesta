@@ -1,0 +1,7 @@
+{
+    "materialTheme.accent": "Tomato",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "workbench.productIconTheme": "material-product-icons",
+    "workbench.colorTheme": "Monokai Pro (Filter Spectrum)"
+}

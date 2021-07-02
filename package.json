@@ -2,14 +2,22 @@
   "name": "tutorial",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "01-server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giornn0/vigilant-fiesta.git"
   },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/giornn0/vigilant-fiesta/issues"
+  },
+  "homepage": "https://github.com/giornn0/vigilant-fiesta#readme",
   "dependencies": {
-    "lodash": "^4.17.21"
+    "express": "^4.17.1"
   }
 }

@@ -1,15 +1,33 @@
-// package.json a manifest file that stores important information about project/package
+console.log('stream example')
 
-//manual => creating a fila called package.json in the root, create properties etc
+var http =  require('http');
 
-//running npm init and step by step 
+var fs = require('fs');
 
-//running npm init -y
 
-const _ = require('lodash');
+// http
+//     .createServer(function(req,res){
+//         const text = fs.readFileSync('./content/big.txt','utf8')
 
-const items = [1,[2,[3,[4]]]]
+//         res.end(text)
 
-const newItems = _.flattenDeep(items)
+//     })
+//     .listen(5000)
 
-console.log(newItems)
+//Esto manda el archivo entero,
+//por eso usamos streams :)
+//the trasfers encoding headers needs to be chunked
+
+http.createServer(function(req,res){
+    const fileStream  = fs.createReadStream('./content/big.txt','utf8')
+    fileStream.on('open',()=>{
+        fileStream.pipe(res)
+    })
+    fileStream.on('error',(error)=>{
+        console.log(error)
+    })
+})
+.listen(5000)
+
+//bunch of request -.-
+//payload ???
